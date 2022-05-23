@@ -1,0 +1,179 @@
+/* Different kinds of Fonts */
+/* font-family: 'Fira Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+}
+body {
+  background-color: rgb(16, 10, 10);
+  color: white;
+  text-align: justify;
+}
+/* This creates a div which is fixed at the top of the viewport  */
+#top {
+  width: 100%;
+  height: 7vh;
+  position: fixed;
+  border-bottom: 2px solid orangered;
+  background-color: black;
+  z-index: 99;
+  text-align: center;
+  font-size: 4.5rem;
+  color: gold;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+#navbar,
+#main-doc,
+form {
+  padding-top: 5%;
+}
+pre {
+  background-color: rgb(232, 228, 228);
+  font-size: 1.5rem;
+  color: purple;
+  font-weight: 900;
+  border-radius: 5px;
+}
+#main-doc li {
+  font-size: 2rem;
+  margin-left: 25px;
+  color: whitesmoke;
+}
+/* By shrinking the main-doc by equal margins to the left and right,I'm trying to prevent it from overlapping the form element when I try to resize the browser window */
+#main-doc {
+  margin: 0 25% 0 25%;
+}
+img {
+  max-width: 90%;
+}
+#navbar {
+  position: fixed;
+  height: 100%;
+  width: 19%;
+  padding-top: 10%;
+  border-right: 2px solid grey;
+  left: 3vw;
+}
+#navbar header:first-child {
+  color: rgb(220, 195, 53);
+  font-size: 2.5rem;
+  font-family: "Lato", sans-serif;
+}
+.nav-link {
+  text-decoration: none;
+  color: grey;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.5rem;
+  color: blue;
+}
+.nav-link:hover {
+  color: rgb(203, 195, 195);
+}
+li {
+  list-style-type: square;
+}
+#main-doc header {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  color: red;
+}
+p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+form {
+  position: fixed;
+  right: 5px;
+  top: 120px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 20%;
+  height: 50vh;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  background-color: gold;
+  z-index: 99;
+}
+label {
+  display: block;
+  line-height: 30px;
+}
+input {
+  width: 60%;
+}
+input[type="submit"] {
+  width: 90px;
+  margin: 10%;
+  background-color: aquamarine;
+}
+a {
+  color: aquamarine;
+}
+
+/* FOR LOWER SCREEN SIZEs AND MOBILE PHONES */
+@media screen and (max-width: 740px) {
+  p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  #navbar {
+    border-right: 2px solid grey;
+    position: static;
+    width: 100%;
+    padding-top: 20%;
+    background-color: rgb(181, 177, 172);
+    text-align: center;
+  }
+  #main-doc {
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+  }
+  #navbar header:first-child {
+    color: rgb(123, 112, 50);
+    font-size: 2.5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: bolder;
+  }
+  body {
+    color: white;
+    text-align: justify;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: rgb(124, 106, 106);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .nav-link:hover {
+    color: rgb(62, 37, 37);
+  }
+  form {
+    position: static;
+    right: 5px;
+    top: 120px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+    height: 20vh;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    background-color: gold;
+  }
+}
