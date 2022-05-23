@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Lato:wght@700&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="top">CSS</div>
+    <nav id="navbar">
+      <header>CSS BASICS</header>
+      <ul>
+        <li>
+          <a href="#CSS_Introduction" class="nav-link">CSS Introduction</a>
+        </li>
+        <li>
+          <a href="#What_You_Should_Know" class="nav-link"
+            >What You Should Know</a
+          >
+        </li>
+        <li><a href="#Fonts_and_Text" class="nav-link">Fonts and Text</a></li>
+        <li>
+          <a href="#CSS:_All_about_boxes" class="nav-link"
+            >CSS: All about boxes
+          </a>
+        </li>
+        <li><a href="#Conclusion" class="nav-link">Conclusion</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="CSS_Introduction">
+        <header>CSS Introduction</header>
+        <p>
+          CSS (Cascading Style Sheets) is the code that styles web content. CSS
+          basics walks through what you need to get started. We'll answer
+          questions like: How do I make text red? How do I make content display
+          at a certain location in the (webpage) layout? How do I decorate my
+          webpage with background images and colors?
+        </p>
+      </section>
+
+      <section class="main-section" id="What_You_Should_Know">
+        <header>What You Should Know</header>
+        <p>
+          Like HTML, CSS is not a programming language. It's not a markup
+          language either. CSS is a style sheet language. CSS is what you use to
+          selectively style HTML elements. For example, this CSS selects
+          paragraph text, setting the color to red:
+        </p>
+        <code>
+          <pre>
+
+          p { 
+            color:red; 
+          } 
+          </pre>
+        </code>
+        <p>
+          Let's try it out! Using a text editor, paste the three lines of CSS
+          (above) into a new file. Save the file as style.css in a directory
+          named styles. To make the code work, we still need to apply this CSS
+          (above) to your HTML document. Otherwise, the styling won't change the
+          appearance of the HTML.
+        </p>
+        <ol>
+          <li>
+            Open your index.html file. Paste the following line in the head
+            (between the
+            <head>
+              and
+            </head>
+            tags):
+          </li>
+          <code> &lt;link href="styles/style.css" rel="stylesheet"&gt; </code>
+          <li>
+            Save index.html and load it in your browser. You should see
+            something like this:
+          </li>
+          <img
+            src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png"
+            alt="The browser window"
+          />
+        </ol>
+        <p>
+          If your paragraph text is red, congratulations! Your CSS is working.
+        </p>
+        <h2>Anatomy of a CSS ruleset</h2>
+        <p>
+          Let's dissect the CSS code for red paragraph text to understand how it
+          works :
+        </p>
+        <img
+          src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png"
+          alt="Anatomy of a CSS ruleset"
+        />
+        <p>
+          The whole structure is called a ruleset. (The term ruleset is often
+          referred to as just rule.) Note the names of the individual parts:
+          Selector This is the HTML element name at the start of the ruleset. It
+          defines the element(s) to be styled (in this example,
+        </p>
+
+        <p>
+          elements). To style a different element, change the selector.
+          Declaration This is a single rule like color: red;. It specifies which
+          of the element's properties you want to style. Properties These are
+          ways in which you can style an HTML element. (In this example, color
+          is a property of the
+        </p>
+
+        <p>
+          elements.) In CSS, you choose which properties you want to affect in
+          the rule. Property value To the right of the property—after the
+          colon—there is the property value. This chooses one out of many
+          possible appearances for a given property. (For example, there are
+          many color values in addition to red.) Note the other important parts
+          of the syntax:
+        </p>
+        <ul>
+          <li>
+            Apart from the selector, each ruleset must be wrapped in curly
+            braces. ({})
+          </li>
+          <li>
+            Within each declaration, you must use a colon (:) to separate the
+            property from its value or values.
+          </li>
+          <li>
+            Within each ruleset, you must use a semicolon (;) to separate each
+            declaration from the next one.
+          </li>
+        </ul>
+        <p>
+          To modify multiple property values in one ruleset, write them
+          separated by semicolons, like this:
+        </p>
+        <code>
+          <pre>
+          p {
+            color: red;
+            width: 500px;
+            border: 1px solid black;
+          }
+          </pre>
+        </code>
+        <h2>Selecting multiple elements</h2>
+        <p>
+          You can also select multiple elements and apply a single ruleset to
+          all of them. Separate multiple selectors by commas. For example:
+        </p>
+        <code>
+          <pre>
+          p, li, h1 {
+            color: red;
+          }
+          </pre>
+        </code>
+        <h2>Different types of selectors</h2>
+        <p>
+          There are many different types of selectors. The examples above use
+          element selectors, which select all elements of a given type. But we
+          can make more specific selections as well. Here are some of the more
+          common types of selectors:
+        </p>
+        <table></table>
+      </section>
+      <section class="main-section" id="Fonts_and_Text">
+        <header>Fonts and Text</header>
+        <p>
+          Now that we've explored some CSS fundamentals, let's improve the
+          appearance of the example by adding more rules and information to the
+          style.css file.
+        </p>
+        <ol>
+          <li>
+            First, find the output from Google Fonts that you previously saved
+            from What will your website look like?. Add the <link /> element
+            somewhere inside your index.html's head (anywhere between the
+            <head>
+              and
+            </head>
+            tags). It looks something like this:
+            <!-- <code>
+              &lt;link href="https://fonts.googleapis.com/css family=Open+Sans"
+              rel="stylesheet"&gt;
+            </code> -->
+            This code links your page to a style sheet that loads the Open Sans
+            font family with your webpage.
+          </li>
+          <li>
+            Next, delete the existing rule you have in your style.css file. It
+            was a good test, but let's not continue with lots of red text.
+          </li>
+          <li>
+            Add the following lines (shown below), replacing the font-family
+            assignment with your font-family selection from What will your
+            website look like?. The property font-family refers to the font(s)
+            you want to use for text. This rule defines a global base font and
+            font size for the whole page. Since &lt;html&gt; is the parent
+            element of the whole page, all elements inside it inherit the same
+            font-size and font-family.
+          </li>
+          <code>
+            <pre>
+
+          html {
+            font-size: 10px;
+            font-family: 'Open Sans';
+
+          }
+          p, li, h1 {
+              color: red;
+          }
+            </pre>
+          </code>
+          <li>
+            Now let's set font sizes for elements that will have text inside the
+            HTML body (&lt;h1&gt;, &lt;li&gt;, and &lt;pGt;). We'll also center
+            the heading. Finally, let's expand the second ruleset (below) with
+            settings for line height and letter spacing to make body content
+            more readable.
+          </li>
+          <code>
+            <pre>
+          h1 { 
+            font-size: 60px; 
+            text-align: center;
+          } 
+          p, li { 
+            font-size: 16px; 
+            line-height: 2; 
+            letter-spacing: 1px; 
+          }
+            </pre>
+          </code>
+          <p>Adjust the px values as you like.</p>
+        </ol>
+      </section>
+      <section class="main-section" id="CSS:_All_about_boxes">
+        <header>CSS: All about boxes</header>
+        <p>
+          Something you'll notice about writing CSS: a lot of it is about boxes.
+          This includes setting size, color, and position. Most HTML elements on
+          your page can be thought of as boxes sitting on top of other boxes.
+        </p>
+        <p>
+          CSS layout is mostly based on the box model. Each box taking up space
+          on your page has properties like:
+        </p>
+        <ul>
+          <li>
+            padding, the space around the content. In the example below, it is
+            the space around the paragraph text.
+          </li>
+          <li>border, the solid line that is just outside the padding.</li>
+          <li>margin, the space around the outside of the border.</li>
+        </ul>
+        <img
+          src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png"
+          alt="CSS Box model"
+        />
+        <p>In this section we also use:</p>
+        <ul>
+          <li>width (of an element).</li>
+          <li>
+            background-color, the color behind an element's content and padding.
+          </li>
+          <li>color, the color of an element's content (usually text).</li>
+          <li>text-shadow sets a drop shadow on the text inside an element.</li>
+          <li>display sets the display mode of an element.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Conclusion">
+        <header>Conclusion</header>
+        <p>
+          If you followed all the instructions in this article, you should have
+          a page that looks similar to this one:
+        </p>
+        <img
+          src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-final.png"
+          alt="Final result"
+        />
+        <p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            >Click here</a
+          >
+          to learn more about CSS
+        </p>
+      </section>
+    </main>
+    <code>
+      <form action="#" method="post" class="form">
+        Your Details
+        <label for="name"
+          >Name:
+          <input type="text" name="your_name" id="name" />
+        </label>
+        <label for="email"
+          >Email:
+          <input type="email" name="your_email" id="email" />
+        </label>
+        <input type="submit" value="SUBMIT" />
+      </form>
+    </code>
+  </body>
+</html>
